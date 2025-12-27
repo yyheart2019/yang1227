@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>探索未知 | 个人空间</title>
+    <style>
+        /* 核心样式定义 */
+        :root {
+            --primary-color: #2d3436;
+            --accent-color: #0984e3;
+            --text-light: #636e72;
+            --bg-color: #f5f6fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* 背景装饰动画 */
+        .bg-blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(135deg, rgba(9, 132, 227, 0.1) 0%, rgba(108, 92, 231, 0.1) 100%);
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: -1;
+            animation: float 20s infinite alternate;
+        }
+
+        @keyframes float {
+            from { transform: translate(-10%, -10%); }
+            to { transform: translate(10%, 10%); }
+        }
+
+        /* 卡片容器 */
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+            background: linear-gradient(to right, #2d3436, #0984e3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        /* 按钮设计 */
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-color);
+            box-shadow: 0 10px 20px rgba(9, 132, 227, 0.2);
+        }
+
+        /* 底部链接 */
+        .social-links {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-blob"></div>
+
+    <main class="container">
+        <h1>未来，始于此处</h1>
+        <p>这是一个独一无二的静态网页空间。在这里，代码与美学相遇，创造出纯净的数字体验。</p>
+        
+        <a href="#" class="btn">立即开启</a>
+
+        <div class="social-links">
+            <a href="#">GitHub</a>
+            <a href="#">Twitter</a>
+            <a href="#">Blog</a>
+        </div>
+    </main>
+
+</body>
+</html>
